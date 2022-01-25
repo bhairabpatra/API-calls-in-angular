@@ -1,0 +1,32 @@
+
+<div class="container">
+
+  <div class="jumbotron text-center p-3 my-3">
+    <h4>Api </h4>
+    <p>API Handel in Angular</p>
+  </div>
+<div class="" *ngIf="posts.length">
+
+  <h2 class="m-3">{{ title }}</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts">
+        <td>{{ post.id }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.body }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="jumbotron p-2 text-center" *ngIf="!posts.length">
+    <h5>No Data Found</h5>
+</div>
+</div>
