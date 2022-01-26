@@ -1,9 +1,38 @@
-<div *ngIf="news" class="products">
-  <h2>{{news.name}}</h2><br>
-  <div><span>Description: </span>{{news.desc}}</div>
-  <div>
-    <button routerLink="/news-edit/{{news.id}}" class="btn btn-primary">
-      Edit
-    </button>
+
+<div class="container">
+  <div class="py-5 text-left">
+    <h2> {{news.name}} </h2>
   </div>
+
+<div class="wrapper">
+<div class="products">
+  <div class="col-md-12">
+      <div class="row jumbotron">
+
+          <div class="col-md-10">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2">
+                      {{news.id}}
+                    </div>
+                    <div class="col-md-4">
+                      <p> {{news.name}} </p>
+                    </div>
+                    <div class="col-md-6">
+                      <p>{{news.desc}}</p>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+          <div class="col-md-2">
+            <button routerLink="/news-edit/{{news.id}}" class="btn btn-primary">
+              Edit
+            </button>
+            </div>
+      </div>
+  </div>
+
+</div>
+</div>
 </div>

@@ -1,17 +1,15 @@
 /* Products Component's private CSS styles */
-.products {
+.wrapper{
 
-
-}
-
-.list{
-  background-color: beige;
-  border: 1px solid red;
+  margin-top: 50px;
+  margin:0px auto;
+  border-radius: 5px;
 
 }
-.delete{
-    border: 1px solid red;
-    position:absolute;
-    right: 0;
-
+.heading{
+  padding: 10px 0px 20px 0px;
+  color: rgb(37, 37, 37);
+}
+.fa-eye{
+  color: #FFF;
 }

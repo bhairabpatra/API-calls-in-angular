@@ -1,13 +1,18 @@
-<div>
-  <h2>Product Add</h2>
-  <div>
-    <label>Product Name:
-      <input [(ngModel)]="newsData.name" placeholder="Product Name"/>
-    </label><br>
-    <label>Product Desc:
-      <textarea [(ngModel)]="newsData.desc" placeholder="Product Description"></textarea>
-    </label><br>
+
+
+<div class="container">
+  <div class="wrapper">
+  <h2 class="heading">Add News</h2>
+
+    <div class="form-group">
+      <label for="email">Name:</label>
+      <input type="text" class="form-control" [(ngModel)]="newsData.name" placeholder="News Name">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Descriptiom:</label>
+      <textarea class="form-control" [(ngModel)]="newsData.desc" placeholder="News Description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary"  (click)="addNews()" >Save</button>
 
   </div>
-  <button (click)="addNews()">Save</button>
 </div>

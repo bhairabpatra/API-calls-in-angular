@@ -1,23 +1,23 @@
-<h2>News List</h2>
 
-<div>
-  <button (click)="add()" class="btn btn-primary btn-lg">
-    Add News
-  </button>
-</div>
+<div class="container">
+  <div class="py-5 text-right">
+    <button (click)="add()" class="btn btn-primary btn-lg">
+      Add News
+    </button>
+  </div>
+
+<div class="wrapper">
+
 
 <div class="products">
   <div class="col-md-12">
-      <div class="row" *ngFor="let p of news; let i=index;">
+      <div class="row jumbotron" *ngFor="let p of news; let i=index;">
 
           <div class="col-md-10">
-
-
-
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-2">
-                      <a routerLink="/news-details/{{p.id}}"><p>{{i+1}}</p></a>
+                      {{i+1}}
                     </div>
                     <div class="col-md-4">
                       <p>{{p.name}}</p>
@@ -31,11 +31,20 @@
           </div>
           <div class="col-md-2">
 
-            <button class="delete btn btn-danger" title="delete product"
-            (click)="delete(p.id)">x</button>
-          </div>
+            <button class="delete btn btn-danger"
+            (click)="delete(p.id)"> <i class="fa fa-trash-o" aria-hidden="true"></i> </button>
+            <button class="btn btn-primary ml-2">
+              <a routerLink="/news-details/{{p.id}}"><i class="fa fa-eye" aria-hidden="true"></i></a>
+            </button>
+            </div>
+
+
+
+
 
       </div>
   </div>
 
+</div>
+</div>
 </div>
