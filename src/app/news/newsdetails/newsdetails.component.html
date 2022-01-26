@@ -1,1 +1,9 @@
-<p>newsdetails works!</p>
+<div *ngIf="news" class="products">
+  <h2>{{news.name}}</h2><br>
+  <div><span>Description: </span>{{news.desc}}</div>
+  <div>
+    <button routerLink="/news-edit/{{news.id}}" class="btn btn-primary">
+      Edit
+    </button>
+  </div>
+</div>
