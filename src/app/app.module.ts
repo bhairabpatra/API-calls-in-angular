@@ -10,6 +10,10 @@ import { NewsComponent } from './news/news/news.component';
 import { NewsaddComponent } from './news/newsadd/newsadd.component';
 import { NewsdeleteComponent } from './news/newsdelete/newsdelete.component';
 import { NewsdetailsComponent } from './news/newsdetails/newsdetails.component'
+import { FormsModule } from '@angular/forms';
+import { NewsService } from './news/news-service/news.service';
+import { NewseditComponent } from './news/newsedit/newsedit.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,15 +22,17 @@ import { NewsdetailsComponent } from './news/newsdetails/newsdetails.component'
     NewsComponent,
     NewsaddComponent,
     NewsdeleteComponent,
-    NewsdetailsComponent
+    NewsdetailsComponent,
+    NewseditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
-  providers: [],
+  providers: [NewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

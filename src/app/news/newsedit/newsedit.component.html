@@ -1,0 +1,12 @@
+<div>
+  <h2>News Edit</h2>
+  <div>
+    <label>Product Name:
+      <input [(ngModel)]="newsData.name" placeholder="Product Name"/>
+    </label><br>
+    <label>Product Desc:
+      <textarea  [(ngModel)]="newsData.desc" placeholder="Product Description"></textarea>
+    </label><br>
+  </div>
+  <button (click)="updateNews()" class="btn btn-primary">Update</button>
+</div>
