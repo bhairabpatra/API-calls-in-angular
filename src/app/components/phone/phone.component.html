@@ -1,0 +1,27 @@
+
+<div class="container">
+<div class="" *ngIf="smartphone.length">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Nesc</th>
+        <th>Price</th>
+        <th>Updated</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of smartphone">
+        <td>{{ p.name }}</td>
+        <td>{{ p.desc }}</td>
+        <td>{{ p.price }}</td>
+        <td>{{ p.updated }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="jumbotron p-2 text-center" *ngIf="!smartphone.length">
+    <h5>No Data Found</h5>
+</div>
+</div>
